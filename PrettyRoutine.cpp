@@ -140,7 +140,7 @@ namespace json11
 			if (object->is_string())
 				stream << std::quoted(object->string_value());
 			else if (object->is_bool())
-				stream << object->bool_value();
+				stream << (object->bool_value() ? "true" : "false");
 			else if (object->is_number())
 				stream << object->number_value();
 			else if (object->is_null())
